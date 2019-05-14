@@ -5,4 +5,9 @@ const List = require('./list-constructor.js');
 let stuff = new List();
 stuff.push('a');
 stuff.push('b');
-// let last = stuff.pop();
+
+console.log(stuff.data);
+
+let last = stuff.pop();
+
+console.log(last === 'b');
