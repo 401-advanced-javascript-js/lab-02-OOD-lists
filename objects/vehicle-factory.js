@@ -26,6 +26,7 @@ function MotorcycleFactory(name) {
     {},
     {name},
     {wheels: 2},
+    {wheelie: () => 'Wheee!'},
     Vehicle()
   );
 
