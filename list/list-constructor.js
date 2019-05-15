@@ -47,12 +47,16 @@ List.prototype.shift = function() {
  * @param {*} item, item to insert
  * @returns {*}
  */
-List.prototype.unshift = function(item) {
-  for (let i = this.length; i > 0; i--) {
-    this.data[i] = this.data[i-1];
+List.prototype.unshift = function(...args) {
+  this.length += args.length;
+  // shift current values to the right to make room 
+  for(let i = (this.length); i > args.length; i--) {
+    this.data[i-1] = this.data[i - 1 - args.length];
   }
-  this.data[0] = item;
-  this.length++;
+  // add passed in items to beginning of list
+  for(let i = args.length; i > 0; i--) {
+    this.data[i-1] = args[i-1];
+  }
   return this.length;
 };
 

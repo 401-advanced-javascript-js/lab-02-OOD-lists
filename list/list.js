@@ -47,16 +47,20 @@ class List {
   }
 
   /**
-   * Add an item to the beginning of the list and returns the length of the list
-   * @param {*} item, item to insert
+   * Add items to the beginning of the list and returns the length of the list
+   * @param {*} item(s), item(s) to insert
    * @returns {*}
    */
-  unshift(item) {
-    for (let i = this.length; i > 0; i--) {
-      this.data[i] = this.data[i-1];
+  unshift(...args) {
+    this.length += args.length;
+    // shift current values to the right to make room 
+    for(let i = (this.length); i > args.length; i--) {
+      this.data[i-1] = this.data[i - 1 - args.length];
     }
-    this.data[0] = item;
-    this.length++;
+    // add passed in items to beginning of list
+    for(let i = args.length; i > 0; i--) {
+      this.data[i-1] = args[i-1];
+    }
     return this.length;
   }
 
