@@ -5,8 +5,8 @@
 ### Author: Jagdeep Singh
 
 ### Links and Resources
-* [submission PR](http://xyz.com)
-* [travis](https://www.travis-ci.com/401-advanced-javascript-js/lab-02-OOD-lists
+* [submission PR](https://github.com/401-advanced-javascript-js/lab-02-OOD-lists/pull/2)
+* [travis](https://www.travis-ci.com/401-advanced-javascript-js/lab-02-OOD-lists)
 
 ### Modules
 
